@@ -60,8 +60,7 @@ The common thread between all the previous cited works is that they consider a d
 
 This work on the other hand, a direct extension of what we have proposed in \cite{JPrPHa2019}, is different in his character of considering a stochastic model of the grid behavior that is take into account during the design phase of the controller. What result is what we have called the Resilient Open Loop Feedback controller (OLFC) which according to the probability of occurrence of an grid outage which we get from the modelling, adapt his behavior.
 
-The paper is further organized as follows. Section \ref{CaseStudy} describes briefly the main components of the system considered. Following in section \ref{ModelGriBeh} we propose two ways of modelling the grid behavior .In section \ref{OLFC} we recall the main objectives of the controller and introduce the results obtained in the previous section into the design of the OLFC. Conclusion and future directions are given in section~\ref{conclusion}.
-\section{Related Works}
+The paper is further organized as follows. Section \ref{CaseStudy} describes briefly the main components of the system considered. Following in section \ref{ModelGriBeh} we propose two ways of modelling the grid behavior. In section \ref{Prob_Statement} we present the problem we are facing by stating the objectives of the controller and introduce the results obtained in the previous sections into the design of the OLFC in section \ref{OLFC}. The next section presents the results and some analysis of the different simulations. Conclusion and future directions are given at the end in section~\ref{conclusion}.
 
 %%
 \section{Case Study}\label{CaseStudy}
@@ -136,7 +135,7 @@ where the first and the second column of equation (\ref{eq:nsStaVec2}) represent
 
 It is important, to emphasis here that $\pi^n_0$ and $\pi^n_1$ correspond respectively to $\mathbb{P}(P^{max}_g = P_0)$ and $\mathbb{P}(P^{max}_g = P_1)$ or equivalently $\lambda$ and $1-\lambda$  in the Bernoulli model.
 
-\section{Problem statement}\label{OLFC}
+\section{Problem statement}\label{Prob_Statement}
 For the solar home, the controller defines two objectives :
 \begin{itemize}
     \item ObjA: Minimizing the electricity bill given by $C_gP_g$, where $C_g$ is the electricity price
@@ -196,7 +195,7 @@ The \textit{worst-case-oriented} RO approach as its name indicates, to solve thi
 
  The  multistage stochastic optimization  introduced in [ref] consider all the possible realizations of a r.v.  at each stage and resolve an unique optimization problems accordingly. The size of the resulting problem grows exponentially in consonance with the distribution of the r.v. and the number of stages considered. For instance take the r.v in our case which can assume two values at each instant for a MPC horizon of 24 hours  with a command frequency of 30 minutes, the problem has $2^{48}= 281.474.976.710.656 \approx 2.10^{14}$ variables.
  
- \section{The open loop feedback controller (OLFC)}
+ \section{The open loop feedback controller (OLFC)}\label{OLFC}
 \begin{table*}[!htbp]
 %% increase table row spacing, adjust to taste
 \renewcommand{\arraystretch}{1}
@@ -368,4 +367,7 @@ In this paper we have developed the so called Resilient Open Loop Feedback Contr
 \bibliography{ifac2020}
  
 \end{document}
+
+
+
 
